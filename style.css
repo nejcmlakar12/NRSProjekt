@@ -1,0 +1,560 @@
+@font-face {
+  font-family: FontNaslov;
+  src: url(Heavitas.ttf);
+}
+@font-face {
+  font-family: FontBesedilo;
+  src: url(LEMONMILK-Medium.otf);
+}
+@font-face {
+  font-family: FontBesedilo1;
+  src: url(LEMONMILK-Regular.otf);
+}
+
+@media screen and (max-width: 800px) {
+  .RegisterText{
+   display: none;
+  }
+  .Chips1{
+   display: none;
+  }
+
+  .PlayNowBesedilo{
+    margin-left: 0%;
+  }
+  .Text{
+    margin-left: 0%;
+  }
+  .logo{
+    margin-left: 8%;
+  }
+ }
+
+*{
+  margin: 0;
+  
+}
+
+.item1{
+
+  width: 400px;
+  margin-left: 100px;
+  
+  
+    
+   
+}
+.item2{
+  width: 200px;
+  height: 300px;
+
+    
+}
+.contanier{
+  margin-left: 10%;
+}
+
+@keyframes rotateAnimation {
+    0%, 100% { transform: rotate(30deg);
+    left: 120px; }
+    50% { transform: rotate(-30deg);
+    left: 0px; } 
+}
+
+@keyframes rotateAnimation1 {
+    0%, 100% { transform: rotate(-30deg);
+    left: 0px; }
+    50% { transform: rotate(30deg);
+    left: 120px; } 
+}
+
+#NavBar{
+  margin: 0.5%;
+}
+
+#NavBar:hover > .navigation::after {
+  opacity: 1;
+}
+  
+.navigation {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  height: 75px;
+  position: relative;
+  width: 100%;  
+  
+
+}
+  
+.navigation:hover::before {
+  opacity: 1;
+  
+}
+  
+.navigation::before,
+.navigation::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+   width: 100%;
+}
+  
+.navigation::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+  }
+  
+.navigation::after {  
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(0, 162, 255, 0.15),
+    transparent 40%
+  );
+  z-index: 1;
+ }
+  
+
+ #naslov
+ {
+  color: rgba(255, 255, 255, 1);
+  font-size: 100px;
+  
+  
+  font-family: FontNaslov;
+  width: auto;
+  margin-top: 4%;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+
+ }
+
+ .glow-container{
+  margin-top: 15%;
+ }
+
+
+.Glow{
+  
+  width: 100px;
+  height: 0px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 0 80px 50px #fff, 
+    0 0 120px 70px rgb(89, 0, 255),
+    0 0 160px 100px #0ff; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: glow 2s linear infinite alternate;
+  
+}
+
+@keyframes glow {
+  0% {
+    box-shadow:
+      0 0 80px 50px #fff, 
+      0 -40px 120px 70px rgb(89, 0, 255), 
+      0 0 160px 100px #0ff; 
+  }
+  25% {
+    box-shadow:
+      0 0 90px 51px #fff, 
+      20px 0 140px 71px rgb(89, 0, 255), 
+      0 0 180px 101px #0ff; 
+  }
+  50% {
+    box-shadow:
+      0 0 80px 54px #fff, 
+      0 40px 150px 74px rgb(89, 0, 255),
+      0 0 190px 104px #0ff; 
+  }
+  75% {
+    box-shadow:
+      0 0 100px 56px #fff, 
+      -20px 0 160px 76px rgb(89, 0, 255), 
+      0 0 200px 106px #0ff; 
+  }
+  100% {
+    box-shadow:
+      0 0 100px 57px #fff, 
+      0 -40px 180px 77px rgb(89, 0, 255), 
+      0 0 220px 107px #0ff; 
+  }
+}
+
+.glow-container {
+  position: relative;
+  
+}
+
+
+
+.logo
+{
+  font-family: FontNaslov;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  color: white;  
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.sredina{
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  
+ 
+}
+
+
+
+.sredina li{
+  display: inline-block;
+  margin-right: 40px;
+  font-family: FontNaslov;
+  z-index: 10;
+  position: relative;
+}
+
+
+
+
+
+.desnastran{
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.Povezava{
+  color: white;
+  transition: all .5s;
+}
+
+
+
+.PlayNow{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 15%;
+  
+}
+
+.Chips1{
+  height: 600px;
+  transform: translateY(200px);
+  transition: all 1.0s  ;
+  opacity: 0;
+}
+
+.PlayNowBesedilo{
+  height: 600px;
+  display: grid;
+	align-items: center;
+  margin-left: 0;
+  
+ 
+}
+.NormalGlow{
+  width: 100px;
+  height: 0px;
+  border-radius: 100%;
+  box-shadow:
+    
+    0 0 180px 70px rgb(89, 0, 255),
+    0 0 350px 100px #0ff, 
+    0 0 380px 100px rgb(0, 140, 255); 
+   
+   
+}
+.PlayNowButton{
+  text-align: center;
+  width: 100%;
+  padding-top: 2%;
+}
+#PlayButton{
+  width: 250px;
+  height: 100px;
+  background-color: #13293D;
+  border: solid 3px white;
+  border-radius: 10px;
+  font-size: 30px;
+  font-family: FontNaslov;
+  margin-top: 10%;
+  z-index: 5;
+  color: white;
+}
+
+.Text{
+  text-align: center;
+  font-family: FontNaslov ;
+  color: white;
+  font-size: 20px;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 1s  ;
+ 
+
+}
+.GlowPozicija
+{
+  display: grid;
+	align-items: center;
+}
+
+.animated
+{
+  transform: scale(1);
+  opacity: 1;
+}
+.animatedChips{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.animation3{
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+
+.DisplayText{
+  display: grid;
+  grid-template-columns: auto auto;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 1s;
+  margin-top: 15%;
+}
+.NaslovBesedila{
+  
+  font-family: FontNaslov;
+  color: white;
+  font-size: 25px;
+  border: solid 2px white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  
+
+ 
+}
+.Besedilo{
+  text-align: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: white; 
+  font-family: FontBesedilo;
+}
+
+.DisplayNaslov
+{
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+
+
+/*----------------------------------REGISTRATION------------------------------*/
+
+#login{
+  display: none;
+}
+#registration{
+  background: rgba(255, 255, 255, 0.295);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 500px;
+  height: 800px;
+  border-radius: 10px;
+  z-index: 10; 
+  position: relative;
+  
+}
+.loginBackground{
+  background-color: rgb(22, 22, 22);
+}
+
+.RegisterText{
+  font-family: FontNaslov;
+  font-size: 20px;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+
+.Registrationglow{
+  width: 100px;
+  height: 0px;
+  border-radius: 100%;
+  box-shadow:
+    0 0 80px 50px #1307c0, 
+    0 0 120px 70px rgb(89, 0, 255),
+    0 0 160px 100px #0ff; 
+    position: absolute;
+    top: 50%;
+    left: 60%;
+  z-index: 0;
+  animation: glowRegistracija 2s linear infinite alternate;
+}
+
+@keyframes glowRegistracija {
+  0% {
+    box-shadow:
+      0 0 80px 50px #1307c0, 
+      0 -40px 120px 70px rgb(89, 0, 255), 
+      0 0 160px 100px #0ff; 
+  }
+  25% {
+    box-shadow:
+      0 0 90px 51px #1307c0, 
+      20px 0 140px 71px rgb(89, 0, 255), 
+      0 0 180px 101px #0ff; 
+  }
+  50% {
+    box-shadow:
+      0 0 80px 54px #1307c0, 
+      0 40px 150px 74px rgb(89, 0, 255),
+      0 0 190px 104px #0ff; 
+  }
+  75% {
+    box-shadow:
+      0 0 100px 56px #1307c0, 
+      -20px 0 160px 76px rgb(89, 0, 255), 
+      0 0 200px 106px #0ff; 
+  }
+  100% {
+    box-shadow:
+      0 0 100px 57px #1307c0, 
+      0 -40px 180px 77px rgb(89, 0, 255), 
+      0 0 220px 107px #0ff; 
+  }
+}
+
+.registracija
+{
+  display: grid;
+  grid-template-columns: auto auto ;
+  align-items: center;
+ 
+  
+}
+.RegisterANDPLAYNOW{
+  color: white;
+  width: 100%;
+
+  top: 3%;
+  left: 50%;
+  font-family: FontNaslov;
+  font-size: 35px;
+  text-align: center;
+
+}
+.RegistrationData{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.PrikazPodatkov{
+  color: black;
+  font-family:  FontBesedilo1;
+
+}
+
+.input{
+  margin: 10px;
+  border: solid white 3px;
+  
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  padding: 9px 12px;
+  line-height: 1.4;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  transition: all .2s ease;
+ 
+
+}
+
+
+.input:hover{
+  box-shadow:  #5dd7e7;
+  border: solid #5dd7e7   3px;
+}
+.input:focus{
+  background: #ffffff;
+  outline: 0;
+  box-shadow:#5dd7e7;
+  border: solid #5dd7e7 3px;
+}
+
+.submitbutton{
+  background-color: #13293D;
+  border: solid 3px white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: FontBesedilo1;
+  margin-top: 10%;
+  z-index: 5;
+  color: white;
+  padding: 10px;
+}
+
+#login{
+  background: rgba(255, 255, 255, 0.295);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 500px;
+  height: 800px;
+  border-radius: 10px;
+  z-index: 10; 
+  position: relative;
+}
